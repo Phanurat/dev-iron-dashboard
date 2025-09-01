@@ -21,7 +21,7 @@ import (
 )
 
 const (
-	defaultAddr = "0.0.0.0:7860" // พอร์ตเริ่มต้น
+	defaultAddr = "0.0.0.0:8860" // พอร์ตเริ่มต้น
 	defaultDB   = "dashboard.db"   // ชื่อไฟล์ DB เริ่มต้น
 	maxBody     = 20 * 1024 * 1024 // 20MB
 )
