@@ -5,7 +5,5 @@ services:
     build: .
     container_name: dashboard
     ports:
-      - "8860:8860"   # expose port 7860 ไป host
-    # volumes:
-    #   - ./dashboard:/app/dashboard # ถ้าอยากเก็บ DB ข้างนอก
+      - "8860:8860"       # expose port host:container
     restart: unless-stopped

@@ -1,20 +1,18 @@
-# ใช้ Go 1.23
-FROM golang:1.23
+# ใช้ base image Linux เบา ๆ
+FROM debian:bookworm-slim
 
 # ตั้ง working directory
 WORKDIR /app
 
-# คัดลอก source code
-COPY go.mod go.sum ./
-RUN go mod download
+# copy binary + database
+COPY dashboard .
+COPY dashboard.db .
 
-COPY . .
-
-# build binary
-# RUN go build -o dashboard dashboard.go
+# ให้สิทธิ์ run
+RUN chmod +x ./dashboard
 
 # expose port
 EXPOSE 8860
 
-# run app
+# รัน binary
 CMD ["./dashboard"]
