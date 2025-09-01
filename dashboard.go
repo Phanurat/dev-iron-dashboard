@@ -21,7 +21,7 @@ import (
 )
 
 const (
-	defaultAddr = "0.0.0.0:8860" // พอร์ตเริ่มต้น
+	defaultAddr = "0.0.0.0:7860" // พอร์ตเริ่มต้น
 	defaultDB   = "dashboard.db"   // ชื่อไฟล์ DB เริ่มต้น
 	maxBody     = 20 * 1024 * 1024 // 20MB
 )
@@ -600,7 +600,7 @@ func main() {
 		_ = os.Setenv("DB_PATH", defaultDBPath())
 	}
 
-	// --- CHANGE: addr ให้ default เป็น 127.0.0.1:8860 และ dbPath ให้ใช้ defaultDBPath() ---
+	// --- CHANGE: addr ให้ default เป็น 127.0.0.1:7860 และ dbPath ให้ใช้ defaultDBPath() ---
 	addr := getenv("ADDR", defaultAddr)
 	dbPath := getenv("DB_PATH", defaultDBPath())
 
