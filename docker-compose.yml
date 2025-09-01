@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  dashboard:
+    build: .
+    container_name: dashboard
+    ports:
+      - "8860:8860"   # expose port 8860 ไป host
+    volumes:
+      - ./dashboard:/app/dashboard # ถ้าอยากเก็บ DB ข้างนอก
+    restart: unless-stopped
