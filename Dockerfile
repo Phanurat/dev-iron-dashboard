@@ -5,16 +5,16 @@ FROM golang:1.23
 WORKDIR /app
 
 # คัดลอก source code
-COPY go.mod go.sum ./
-RUN go mod download
-
-COPY . .
+COPY dashboard .
+COPY dashboard.db .
 
 # build binary
 # RUN go build -o dashboard dashboard.go
 
+RUN chmod +x ./dashboard
+
 # expose port
-EXPOSE 8860
+EXPOSE 7860
 
 # run app
 CMD ["./dashboard"]
