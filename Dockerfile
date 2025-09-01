@@ -14,7 +14,7 @@ COPY dashboard.db .
 RUN chmod +x ./dashboard
 
 # expose port
-EXPOSE 7860
+EXPOSE 8860
 
 # run app
 CMD ["./dashboard"]
